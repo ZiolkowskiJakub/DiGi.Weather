@@ -43,6 +43,40 @@ public Weather(DiGi.Weather.Classes.Weather weather);
 
 The weather instance to copy\.
 
+<a name='DiGi.Weather.Classes.Weather.Weather(System.Collections.Generic.IEnumerable_DiGi.Weather.Classes.WeatherRecord_)'></a>
+
+## Weather\(IEnumerable\<WeatherRecord\>\) Constructor
+
+Initializes a new instance of the [Weather](DiGi.Weather.Classes.md#DiGi.Weather.Classes.Weather 'DiGi\.Weather\.Classes\.Weather') class with a collection of weather records\.
+
+```csharp
+public Weather(System.Collections.Generic.IEnumerable<DiGi.Weather.Classes.WeatherRecord> weatherRecords);
+```
+#### Parameters
+
+<a name='DiGi.Weather.Classes.Weather.Weather(System.Collections.Generic.IEnumerable_DiGi.Weather.Classes.WeatherRecord_).weatherRecords'></a>
+
+`weatherRecords` [System\.Collections\.Generic\.IEnumerable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System\.Collections\.Generic\.IEnumerable\`1')[WeatherRecord](DiGi.Weather.Classes.md#DiGi.Weather.Classes.WeatherRecord 'DiGi\.Weather\.Classes\.WeatherRecord')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System\.Collections\.Generic\.IEnumerable\`1')
+
+The collection of weather records to initialize with\.
+
+<a name='DiGi.Weather.Classes.Weather.Weather(System.Text.Json.Nodes.JsonObject)'></a>
+
+## Weather\(JsonObject\) Constructor
+
+Initializes a new instance of the [Weather](DiGi.Weather.Classes.md#DiGi.Weather.Classes.Weather 'DiGi\.Weather\.Classes\.Weather') class from a JSON object\.
+
+```csharp
+public Weather(System.Text.Json.Nodes.JsonObject jsonObject);
+```
+#### Parameters
+
+<a name='DiGi.Weather.Classes.Weather.Weather(System.Text.Json.Nodes.JsonObject).jsonObject'></a>
+
+`jsonObject` [System\.Text\.Json\.Nodes\.JsonObject](https://learn.microsoft.com/en-us/dotnet/api/system.text.json.nodes.jsonobject 'System\.Text\.Json\.Nodes\.JsonObject')
+
+The JSON object containing weather data\.
+
 <a name='DiGi.Weather.Classes.Weather_TWeatherRecord_'></a>
 
 ## Weather\<TWeatherRecord\> Class
@@ -138,7 +172,7 @@ The JSON object containing the weather data\.
 Gets or sets the list of weather records\.
 
 ```csharp
-public System.Collections.Generic.IList<TWeatherRecord>? WeatherRecords { get; private set; }
+public System.Collections.Generic.IList<TWeatherRecord>? WeatherRecords { get; set; }
 ```
 
 #### Property Value

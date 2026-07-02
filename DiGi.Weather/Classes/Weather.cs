@@ -23,6 +23,15 @@ namespace DiGi.Weather.Classes
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Weather"/> class with a collection of weather records.
+        /// </summary>
+        /// <param name="weatherRecords">The collection of weather records to initialize with.</param>
+        public Weather(IEnumerable<WeatherRecord> weatherRecords)
+            : base(weatherRecords)
+        {
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Weather"/> class by copying another instance.
         /// </summary>
         /// <param name="weather">The weather instance to copy.</param>
@@ -32,6 +41,10 @@ namespace DiGi.Weather.Classes
 
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Weather"/> class from a JSON object.
+        /// </summary>
+        /// <param name="jsonObject">The JSON object containing weather data.</param>
         public Weather(JsonObject jsonObject)
             : base(jsonObject)
         {
@@ -119,7 +132,7 @@ namespace DiGi.Weather.Classes
                 return weatherRecords?.Values.ToList() ?? [];
             }
 
-            private set
+            set
             {
                 weatherRecords.Clear();
 
