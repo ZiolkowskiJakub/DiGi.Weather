@@ -44,6 +44,7 @@ All operations, calculations, and conversions are implemented as static **Extens
 * **Query** (`/Query` → `public static partial class Query`): Returns values or calculations based on the object state without mutating it (e.g., averaging a temperature series, extracting a design day).
 * **Modify** (`/Modify` → `public static partial class Modify`): Modifies the state or properties of the target object.
 * **Create** (`/Create` → `public static partial class Create`): Instantiates and returns a brand-new object (e.g., building a `Weather` container from a parsed weather file).
+* **Convert** (`/Convert/To[TargetArea]` → `public static partial class Convert`): Converts, formats, or transforms an object or raw components into another representation (e.g., `ToEPW_DateTime`).
 
 ---
 
