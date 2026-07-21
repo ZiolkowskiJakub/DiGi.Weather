@@ -17,9 +17,8 @@ namespace DiGi.Weather.Classes
         /// <summary>
         /// Initializes a new instance of the <see cref="Weather"/> class.
         /// </summary>
-        public Weather() 
+        public Weather()
         {
-            
         }
 
         /// <summary>
@@ -36,9 +35,8 @@ namespace DiGi.Weather.Classes
         /// </summary>
         /// <param name="weather">The weather instance to copy.</param>
         public Weather(Weather weather)
-            :base(weather)
+            : base(weather)
         {
-
         }
 
         /// <summary>
@@ -48,10 +46,8 @@ namespace DiGi.Weather.Classes
         public Weather(JsonObject jsonObject)
             : base(jsonObject)
         {
-
         }
     }
-
 
     /// <summary>
     /// Provides a base abstract class for weather data containers.
@@ -85,7 +81,6 @@ namespace DiGi.Weather.Classes
         /// </summary>
         public Weather()
         {
-
         }
 
         /// <summary>
@@ -95,7 +90,6 @@ namespace DiGi.Weather.Classes
         public Weather(JsonObject jsonObject)
             : base(jsonObject)
         {
-
         }
 
         /// <summary>
@@ -103,9 +97,9 @@ namespace DiGi.Weather.Classes
         /// </summary>
         /// <param name="weather">The weather instance to copy.</param>
         public Weather(Weather<TWeatherRecord> weather)
-            :base(weather)
+            : base(weather)
         {
-            if(weather is not null)
+            if (weather is not null)
             {
                 WeatherRecords = weather.WeatherRecords;
             }
@@ -141,7 +135,7 @@ namespace DiGi.Weather.Classes
                     return;
                 }
 
-                foreach(TWeatherRecord weatherRecord in value)
+                foreach (TWeatherRecord weatherRecord in value)
                 {
                     if (weatherRecord is null)
                     {
@@ -153,7 +147,6 @@ namespace DiGi.Weather.Classes
                         weatherRecords.Add(weatherRecord.DateTime, weatherRecord);
                     }
                 }
-
             }
         }
     }
